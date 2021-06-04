@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1>{{article.title}}</h1>
+    <small>Written by {{article.author}} on {{article.create_date}}</small>
+    <hr>
+    <div>
+        {{article.body | safe}}
+    </div>
+
+    <hr><hr>
+    <p><a href="{{url_for('articles')}}">  &#x1F448; All Articles</a></p>
+{% endblock body %}
